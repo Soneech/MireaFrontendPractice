@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #E0CCC2;
+    font-family: 'Pangolin';
+    font-size: large;
+}   
+
+header, nav {
+    display: flex;
+}
+
+header {
+    background-color: #8B5941;
+    height: 70px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    margin: 20px 20px;
+}
+
+nav > h2 {
+    margin: auto 20px;
+}
+
+main {
+    padding: 70px 280px;
+}
+
+.menu {
+    padding: 170px 20px 0px;
+    position: fixed;
+
+}
+
+footer {
+    background-color: #8B5941;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 70px;
+    padding-left: 260px; 
+    position: relative;
+    bottom: 0px;
+    display: flex;
+}
+
+footer > p, address {
+    display: flex;
+    margin: auto 20px;
+}
+
+address > a {
+    margin: auto 20px;
+}
+
+a:hover {
+    background-color: #DB4D43;
+    border-radius: 40px 40px;
+}
+
+a:link {
+    color: #160903;
+}
+
+a:visited {
+    color:#551C02;
+}
+
+a:active {
+    color: #7D300D;
+}
+
+.startimg {
+    float: left;
+    margin-right: 20px;
+}
+
+#breeds {
+    padding-top: 30px;
+}
+
+img {
+    padding-left: 20px;
+}
