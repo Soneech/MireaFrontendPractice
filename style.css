@@ -63,6 +63,7 @@ footer {
 footer > p, address {
     display: flex;
     margin: auto 20px;
+    text-shadow: #E0CCC2 0 0 5px;
 }
 
 address > a {
