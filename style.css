@@ -6,6 +6,7 @@ body {
     background-color: #E0CCC2;
     font-family: 'Pangolin';
     font-size: large;
+    line-height: 30px;
 }   
 
 header, nav {
@@ -36,10 +37,12 @@ nav > h2 {
     margin-right: 30px;
     top: 70px;
     float: left;
+    text-shadow: #8B5941 0 0 5px;
 }
 
 .content {
     padding-left: 280px;
+    padding-right: 60px;
 }
 
 footer {
@@ -85,4 +88,9 @@ img {
 
 #preface {
     padding-top: 30px;
+}
+
+.startimg {
+    float: left;
+    margin-right: 20px;
 }
