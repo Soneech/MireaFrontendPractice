@@ -13,32 +13,25 @@
     </head>
 
     <body>
-        <header> <!-- Шапка сайта -->
+        <header href="top"> <!-- Шапка сайта -->
             <h3 class="logo-text">Всё о крысках :3</h3>
 
-            <input id="menu-toggle" type="checkbox" />
+            <input id="menu-checkbox" type="checkbox" />
 
-            <label class='menu-button-container' for="menu-toggle">
+            <label class='menu-button-container' for="menu-checkbox">
                 <div class='menu-button'></div>
             </label>
 
             <ul class="menu">
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-              <li>Five</li>
+                <li><a href="#top">Главная</a>
+                <li><a href="#bottom">Контакты</a>
+                <li><a href="#breeds">Виды</a>
+                <li><a href="#galery">Галерея</a>
             </ul>
         </header>
 
-        <a name="top"></a>
-
         <main>
             <aside class="page-links">
-                <!--
-                <a href="#top"><h3>Переместиться вверх</h3></a>
-                -->
-    
                 <h3>Содержание</h3> 
                 <ol>
                     <li><a href="#preface">Предисловие</a>
@@ -51,14 +44,11 @@
                     </ul>
                     <li><a href="#features">Забавные особенности</a>
                     <li><a href="#contacts">Контакты зоомагазина</a>
-                    <li><a href="#links">Полезные ссылки</a>
+                    <!-- <li><a href="#links">Полезные ссылки</a> -->
                     <li><a href="#video-block">Смешные видео :з</a>
+                    <li><a href="#galery">Галерея</a>
                     <li><a href="#report">Нашли ошибку?</a>
                 </ol>
-
-                <!--
-                <a href="#bottom"><h3>Переместиться вниз</h3></a>
-                -->
             </aside>
 
             <h3 class="abbreviation"> <!-- Шуточная аббревиатура :) -->
@@ -91,7 +81,7 @@
                     </p>
 
                     <img
-                        class="startimg"
+                        class="base-image"
                         src="https://new-year-party.ru/wp-content/uploads/2019/07/noovogodnie-oboi-s-krysami-13.jpg"
                         alt="Фото милых крысок"
                         width="540"
@@ -113,7 +103,8 @@
                     <article>
                         <h3 id="standard">Стандарт</h3>
 
-                        <img 
+                        <img
+                            class="base-image" 
                             src="https://cdn.fishki.net/upload/post/201311/08/1214084/2199520904_bdba185ae0_b.jpg"
                             alt="Стандартная крыска"
                             width="440" height="440">
@@ -134,7 +125,8 @@
                     <article>
                         <h3 id="dambo">Дамбо</h3>
 
-                        <img 
+                        <img
+                            class="base-image" 
                             src="https://i.pinimg.com/originals/61/95/46/6195467c9475fe2e70d687d11867c796.jpg"
                             alt="Крыска-дамбо"
                             width="450" height="420">
@@ -149,7 +141,8 @@
                     <article>
                         <h3 id="husky">Хаски</h3>
 
-                        <img 
+                        <img
+                            class="base-image" 
                             src="https://grizun-off.ru/wp-content/uploads/9/d/e/9def6d06d24c3b6cd99b54ef736e352c.jpg"
                             alt="Крыска-хаски"
                             width="650" height="420">
@@ -164,7 +157,8 @@
                     <article>
                         <h3 id="albino">Альбинос</h3>
 
-                        <img 
+                        <img
+                            class="base-image" 
                             src="https://catherineasquithgallery.com/uploads/posts/2021-02/1612491790_129-p-mish-na-serom-fone-170.jpg"
                             alt="Крыска-альбинос"
                             width="580" height="420">
@@ -212,7 +206,8 @@
                 </div>
             </section>
 
-            <div> <!-- Блок с картой изображений -->
+            <!--
+            <div>
                 <h3 id="links">Полезные ссылки</h3>
                 <img 
                     src="img/map.png"
@@ -226,6 +221,7 @@
                     <area shape = "poly" coords = "620,5,520,250,725,250" href = "https://prokrys.ru/osobennosti-krys/harakter-krys.html" alt = "треугольник" >
                 </map>
             </div>
+            -->
 
             <div>
                 <h3 id="video-block">Смешные видео :з</h3>
@@ -255,6 +251,84 @@
                     
             </div>
 
+            <div class="gallery-div">
+                <h3 id="galery">Галерея</h3>
+
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://fikiwiki.com/uploads/posts/2022-02/1644864993_39-fikiwiki-com-p-krisi-krasivie-kartinki-44.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://zooblog.ru/uploads/posts/2012-05/1336974719_5.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://econet.ru/media/1092/kindeditor/image/201404/20140402141828.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://krasivosti.pro/uploads/posts/2021-06/1623474687_45-krasivosti_pro-p-milie-kriski-zhivotnie-krasivo-foto-51.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://fikiwiki.com/uploads/posts/2022-02/1644864967_29-fikiwiki-com-p-krisi-krasivie-kartinki-33.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://snitsya-son.ru/uploads/bonica/2019/09/odin-prisnivshiysya.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://bugaga.ru/uploads/posts/2017-07/1500452715_foto-krys-14.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://bugaga.ru/uploads/posts/2017-07/1500452753_foto-krys-5.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://i.pinimg.com/originals/32/d6/d3/32d6d383944aca86196d6fabcf81107a.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="http://fotokudra.lt/files/I665844.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://krasivosti.pro/uploads/posts/2021-06/1623474606_38-krasivosti_pro-p-milie-kriski-zhivotnie-krasivo-foto-43.jpg">
+                    </div>
+
+                    <div class="grid-item">
+                        <img 
+                            class="grid-image"
+                            src="https://funart.pro/uploads/posts/2021-07/1627367007_11-funart-pro-p-krisa-s-koronoi-zhivotnie-krasivo-foto-20.jpg">
+                    </div>
+                </div>
+            </div>
+
             <div>
                 <h3 id="report">Нашли ошибку?</h3>
                 <p>
@@ -264,28 +338,24 @@
                 <form action="" method="post" id="reportform">
                     <fieldset>
                         <legend>Пожалуйста, введите свои данные</legend>
-                        <label for="name">
-                            Имя:
+                        
+                            <label for="name"> Имя:</label>
                             <input type="text" name="name" id="name" max="30" required>
-                        </label>
-                        
-                        <label for="phonenum">
-                            Телефон:
+
+                            <label for="phonenum">Телефон:</label>
                             <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="+7" required>
-                        </label>
                         
-                        <label for="email">
-                            Почта:
+                            <label for="email">Почта:</label>
                             <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" required>
-                        </label>
+                           
                         <br><br>        
                         
                         <label for="reporttext">Опишите проблему:</label><br>
-                        <textarea 
+                        <textarea class="report-textarea"
                             id="reporttext" 
                             name="reporttext" 
                             rows="5" 
-                            cols="60" 
+                            cols="60"
                             maxlength="1000" 
                             minlength="50" 
                             placeholder="Распишите всё подробно! :)"
@@ -322,11 +392,9 @@
         </main>
 
         <footer id="contacts">
-            <p>ⓒ 2022, Soneech</p>
-            <address>
-                <a href="tel:0123456789" id="footer-link1">Телефон нашего магазина</a>
-                <a href="mailto:sonya.patrina100@gmail.com" id="footer-link2">Также вы можете написать нам на почту</a>
-            </address>
+            <p id="copyright">ⓒ 2022, Soneech</p>
+            <p><a href="tel:0123456789" id="footer-link1">Телефон нашего магазина</a></p>
+            <p><a href="mailto:sonya.patrina100@gmail.com" id="footer-link2">Также вы можете написать нам на почту</a></p>
         </footer>
 
         <a name="bottom"></a>
