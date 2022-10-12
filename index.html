@@ -17,12 +17,10 @@
 
         <header> <!-- Шапка сайта -->
             <h2 class="logo">Всё о крысках :3</h2>
-            <nav>
-                <h2><a href="#breeds">Популярные породы</a></h2>
-                <h2><a href="#features">Забавные особенности</a></h2>
-                <h2><a href="#contacts">Контакты зоомагазина</a></h2>
-                <h2><a href="#links">Полезные ссылки</a></h2>
-            </nav>
+            <div class="authbutton">
+                <button name="authorization">Войти</button>
+                <button name="registration">Зарегистрироваться</button>
+            </div>
         </header>
 
         <main>
@@ -48,6 +46,8 @@
                     <li><a href="#features">Забавные особенности</a>
                     <li><a href="#contacts">Контакты зоомагазина</a>
                     <li><a href="#links">Полезные ссылки</a>
+                    <li><a href="#video-block">Смешные видео :з</a>
+                    <li><a href="#report">Нашли ошибку?</a>
                 </ol>
     
                 <a href="#bottom"><h3>Переместиться вниз</h3></a>
@@ -221,6 +221,99 @@
                         <area shape = "circle" coords = "385,125,130" href = "https://mamavet.ru/gryzuny/krysy/chem-kormyat-domashnih-krys/" alt = "круг" >
                         <area shape = "poly" coords = "620,5,520,250,725,250" href = "https://prokrys.ru/osobennosti-krys/harakter-krys.html" alt = "треугольник" >
                     </map>
+                </div>
+
+                <div>
+                    <h3 id="video-block">Смешные видео :з</h3>
+                        <div>
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/ZgA3YTD3lI0" 
+                                title="video1" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <div>
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/leGQkHVsrZ4" 
+                                title="video2" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                </div>
+
+                <div>
+                    <h3 id="report">Нашли ошибку?</h3>
+                    <p>
+                        Если вы нашли ошибку в тексте или какую-либо неточность, вы можете сразу сообщить нам, заполнив форму ниже:
+                    </p>
+                    
+                    <form action="" method="post" id="reportform">
+                        <fieldset>
+                            <legend>Пожалуйста, введите свои данные</legend>
+                            <label for="name">
+                                Имя:
+                                <input type="text" name="name" id="name" max="30" required>
+                            </label>
+                            
+                            <label for="phonenum">
+                                Телефон:
+                                <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="+7" required>
+                            </label>
+                            
+                            <label for="email">
+                                Почта:
+                                <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" required>
+                            </label>
+                            <br><br>        
+                            
+                            <label for="reporttext">Опишите проблему:</label><br>
+                            <textarea 
+                                id="reporttext" 
+                                name="reporttext" 
+                                rows="5" 
+                                cols="60" 
+                                maxlength="1000" 
+                                minlength="50" 
+                                placeholder="Распишите всё подробно! :)"
+                                required>
+                            </textarea>
+
+                            <label for="city-select" id="city-label">Ваш город:</label>
+                            <select name="city-select" id="city-select" required>
+                                <option value="">--Выберите город</option>
+                                <option value="moscow">Москва</option>
+                                <option value="petersburg">Санкт-Петербург</option>
+                                <option value="ekaterinburg">Екатеринбург</option>
+                                <option value="kazan">Казань</option>
+                                <option value="samara">Самара</option>
+                                <option value="novosibirsk">Новосибирск</option>
+                                <option value="kemerovo">Кемерово</option>
+                            </select>
+
+                            <p>
+                                <label for="files">Если хочется, то можно прикрепить скриншоты :)</label><br>
+                                <input type="file" name="files" id="files" accept="image/jpeg,image/png" multiple>
+                            </p>
+
+                            <p>
+                                <label for="notrobot">Я не робот</label>
+                                <input type="checkbox" name="notrobot" id="notrobot" required>
+                            </p>
+                        
+                            <input type="submit" name="reportbtn" id="reportbtn" checked> 
+                            
+                        </fieldset>
+                    </form><br>
                 </div>
             </div>
         </main>

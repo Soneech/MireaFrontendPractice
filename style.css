@@ -9,15 +9,10 @@ body {
     line-height: 30px;
 }   
 
-header, nav {
+header {
     display: flex;
     position: relative;
     top: -3px;
-}
-
-nav > h2 {
-    display: flex;
-    margin-left: 15px;
 }
 
 header {
@@ -47,6 +42,7 @@ header {
 .content {
     padding-left: 280px;
     padding-right: 60px;
+    padding-top: 100px;
 }
 
 footer {
@@ -105,4 +101,66 @@ img {
     position: absolute;
     top: 90px;
     left: 30px;
+}
+
+.authbutton {
+    margin-left: auto;
+    margin-right: 45px;
+    margin-top: 18px;
+}
+
+.authbutton > button {
+    margin-right: 15px;
+}
+
+button {
+    font-size: 20px;
+    background-color: #C19986;
+    border-color: #C19986;
+    font-family: 'Pangolin';
+    border-radius: 15px;
+}
+
+input {
+    border-radius: 4px;
+}
+
+fieldset {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 710px;
+    border-color: #C19986;
+}
+
+#reportbtn {
+    font-size: 18px;
+    background-color: #C19986;
+    border-color: #C19986;
+    font-family: 'Pangolin';
+    border-radius: 15px;
+}
+
+#reporttext {
+    margin-right: 3px;
+    border-radius: 5px;
+}
+
+#phonenum::placeholder {
+    color:#8B5941;
+}
+
+#city-select {
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'Pangolin';
+    border-width: 2px;
+}
+
+#city-select:focus {
+    border-color: #551C02;
+}
+
+#files {
+    font-size: 16px;
+    font-family: 'Pangolin';
 }
