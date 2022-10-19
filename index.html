@@ -341,13 +341,13 @@
                         
                             <label for="name"> Имя:</label>
                             <input type="text" name="name" id="name" max="30" required>
-
+                            <br>        
                             <label for="phonenum">Телефон:</label>
                             <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="+7" required>
-                        
+                            <br>
                             <label for="email">Почта:</label>
                             <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" required>
-                           
+                        
                         <br><br>        
                         
                         <label for="reporttext">Опишите проблему:</label><br>
@@ -361,7 +361,7 @@
                             placeholder="Распишите всё подробно! :)"
                             required>
                         </textarea>
-
+                        <br>
                         <label for="city-select" id="city-label">Ваш город:</label>
                         <select name="city-select" id="city-select" required>
                             <option value="">--Выберите город</option>
@@ -391,12 +391,10 @@
             </div>
         </main>
 
-        <footer id="contacts">
+        <div class="footer" id="bottom">
             <p id="copyright">ⓒ 2022, Soneech</p>
             <p><a href="tel:0123456789" id="footer-link1">Телефон нашего магазина</a></p>
             <p><a href="mailto:sonya.patrina100@gmail.com" id="footer-link2">Также вы можете написать нам на почту</a></p>
-        </footer>
-
-        <a name="bottom"></a>
+        </div>
     </body>
 </html>

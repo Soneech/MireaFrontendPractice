@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -22,7 +23,7 @@ header {
     color: #FFF;
     text-shadow: #E0CCC2 0 0 5px;
     height: 90px;
-    width: 100vw;
+    width: 100%;
 }
 
 .menu > li > a {
@@ -95,7 +96,7 @@ header {
     transform: rotate(-45deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .menu-button-container {
         display: flex;
     }
@@ -147,7 +148,7 @@ header {
         width: 60%;
     }
 
-    footer {
+    .footer {
         font-size: small;
     }
 }
@@ -155,21 +156,28 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    margin-left: 80px;
+    margin-left: 60px;
     margin-right: 60px;
     margin-top: 100px;
 }
 
-footer {
+.footer {
     background: linear-gradient(to left, #f46b45, #eea849);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     height: 70px; 
     position: relative;
-    bottom: 0px;  
+    bottom: 0px; 
+    left: 0px;
+    right: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -8px;
+}
+
+div {
+    display: block;
 }
 
 #copyright, #footer-link1, #footer-link2 {
@@ -221,7 +229,7 @@ fieldset {
     margin: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-    width: 710px;
+    width: 35%;
     border-color: #eeb96f;
 }
 
@@ -264,14 +272,8 @@ fieldset {
     display: flex;
 }
 
-.gallery-div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .grid-container {
-    columns: 5 290px;
+    columns: 4 290px;
     column-gap: 1.5rem;
     width: 90%;
     margin: 0 auto;
@@ -282,7 +284,7 @@ fieldset {
     margin: 0 1.5rem 1.5rem 0;
     display: inline-block;
     width: 100%;
-    border: double 2px grey;
+    border: solid 2px grey;
     padding: 5px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     border-radius: 5px;
