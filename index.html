@@ -5,11 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Крыски</title> 
         <link rel="icon" type="image/png" href="img/icon2.png"/> <!-- фавиконка --> 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=PT+Sans+Narrow&family=Pangolin&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -30,6 +33,35 @@
             </ul>
         </header>
 
+        <div class="notification">
+            <div class="notification-icon">
+                <i class="fa fa-bell bell"></i>
+                <span>4</span>
+            </div>
+
+            <div class="notification-popup">
+                <div class="notification-item">
+                    <i class="far fa-newspaper"></i>
+                    <p>Приветствуем вас на нашем сайте!</p>
+                </div>
+
+                <div class="notification-item">
+                    <i class="far fa-newspaper"></i>
+                    <p>Здесь вы сможете найти много полезного :)</p>
+                </div>
+
+                <div class="notification-item">
+                    <i class="far fa-newspaper"></i>
+                    <p>У нас появился новый раздел с галереей!</p>
+                </div>
+
+                <div class="notification-item">
+                    <i class="far fa-newspaper"></i>
+                    <p>И немного полезных ссылок в конце)</p>
+                </div>
+            </div>
+        </div>
+
         <main>
             <aside class="page-links">
                 <h3>Содержание</h3> 
@@ -44,9 +76,10 @@
                     </ul>
                     <li><a href="#features">Забавные особенности</a>
                     <li><a href="#contacts">Контакты зоомагазина</a>
-                    <!-- <li><a href="#links">Полезные ссылки</a> -->
-                    <li><a href="#video-block">Смешные видео :з</a>
                     <li><a href="#galery">Галерея</a>
+                    <li><a href="#links">Полезные материалы</a>
+                    <li><a href="#kards">Карточки</a>
+                    <li><a href="#video-block">Смешные видео :з</a>
                     <li><a href="#report">Нашли ошибку?</a>
                 </ol>
             </aside>
@@ -159,7 +192,7 @@
 
                         <img
                             class="base-image" 
-                            src="https://catherineasquithgallery.com/uploads/posts/2021-02/1612491790_129-p-mish-na-serom-fone-170.jpg"
+                            src="http://pm1.narvii.com/7151/7f81cddc4584c7eb7c5e10257e8ba13df12a0944r1-900-600v2_uhq.jpg"
                             alt="Крыска-альбинос"
                             width="580" height="420">
                         
@@ -205,51 +238,6 @@
                     </dl>
                 </div>
             </section>
-
-            <!--
-            <div>
-                <h3 id="links">Полезные ссылки</h3>
-                <img 
-                    src="img/map.png"
-                    alt="Полезные ссылки"
-                    usemap="#Links"
-                    width="750"
-                    height="256">
-                <map name="Links">
-                    <area shape = "rect" coords = "25,5,200,250" href = "https://ru.wikihow.com/ухаживать-за-крысой" alt = "Квадрат" >
-                    <area shape = "circle" coords = "385,125,130" href = "https://mamavet.ru/gryzuny/krysy/chem-kormyat-domashnih-krys/" alt = "круг" >
-                    <area shape = "poly" coords = "620,5,520,250,725,250" href = "https://prokrys.ru/osobennosti-krys/harakter-krys.html" alt = "треугольник" >
-                </map>
-            </div>
-            -->
-
-            <div>
-                <h3 id="video-block">Смешные видео :з</h3>
-                    <div>
-                        <iframe 
-                            width="560" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/ZgA3YTD3lI0" 
-                            title="video1" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-                    <div>
-                        <iframe 
-                            width="560" 
-                            height="315" 
-                            src="https://www.youtube.com/embed/leGQkHVsrZ4" 
-                            title="video2" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-            </div>
 
             <div class="gallery-div">
                 <h3 id="galery">Галерея</h3>
@@ -330,6 +318,71 @@
             </div>
 
             <div>
+                <br>
+                <h3 id="links">Полезные материалы</h3>
+                <br>
+                <div class="buttons-links">
+                    <button class="btn-links link-btn1" onclick="window.location.href = 'https://vplate.ru/krysa/uhod/'"></button>
+                    <button class="btn-links link-btn2" onclick="window.location.href = 'https://zverek.org/ratsion-krysy.html'"></button>
+                    <button class="btn-links link-btn3" type="button" onclick="window.location.href = 'https://litbro.ru/gryzuny/krysa/dressirovka-krysy'"></button>
+                </div>
+
+            </div>
+            <br><br>
+            <div>
+                <h3 id="cards">Карточки</h3><br>
+                <div class="cards-block">
+                    <div class="image-block">
+                        <img
+                            class="card-image card-image1" 
+                            src="https://i.pinimg.com/originals/7c/e4/7b/7ce47bc24b1c8a5b43f4fe552cde2095.jpg"
+                            width="400"
+                            height="500">
+                        <p class="image-text1"><br></p>
+                    </div>
+                    
+                    <div>
+                        <img
+                            class="card-image card-image2"  
+                            src="https://i.pinimg.com/originals/2c/6c/cb/2c6ccb12af0f8053598094c758d8c9e3.png"
+                            width="400"
+                            height="500">
+                        <p class="image-text2"><br></p>
+                    </div>
+                    
+                    <div>
+                        <img
+                            class="card-image card-image3"  
+                            src="https://i.pinimg.com/originals/f2/01/4f/f2014f69018359f4f154bf3b4d20f7ff.jpg"
+                            width="400"
+                            height="500">
+                        <p class="image-text3"><br></p>
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+
+            <div>
+                <h3 id="video-block">Смешные видео :з</h3>
+                <div class="video-box">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="video/rats.mp4" 
+                        title="video" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                    
+                    <div class="video-info">
+                        <p>Подборка забавных моментов</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
                 <h3 id="report">Нашли ошибку?</h3>
                 <p>
                     Если вы нашли ошибку в тексте или какую-либо неточность, вы можете сразу сообщить нам, заполнив форму ниже:
@@ -375,16 +428,11 @@
                         </select>
 
                         <p>
-                            <label for="files">Если хочется, то можно прикрепить скриншоты :)</label><br>
-                            <input type="file" name="files" id="files" accept="image/jpeg,image/png" multiple>
-                        </p>
-
-                        <p>
                             <label for="notrobot">Я не робот</label>
                             <input type="checkbox" name="notrobot" id="notrobot" required>
                         </p>
                     
-                        <input type="submit" name="reportbtn" id="reportbtn" checked> 
+                        <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked> 
                         
                     </fieldset>
                 </form><br>
