@@ -200,49 +200,6 @@ a:active {
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
 }
 
-input {
-    border-radius: 4px;
-}
-
-fieldset {
-    display: block;
-    margin: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    width: 35%;
-    border-color: #eeb96f;
-}
-
-#reporttext {
-    margin-right: 3px;
-    border-radius: 5px;
-}
-
-#phonenum::placeholder {
-    color:#eea849;
-}
-
-#city-select {
-    font-size: 16px;
-    border-radius: 5px;
-    color: #5e5e5e;
-    font-family: 'Pangolin';
-    border-width: 2px;
-}
-
-#city-select:focus {
-    border-color: #f46b45;
-}
-
-#files {
-    font-size: 16px;
-    font-family: 'Pangolin';
-}
-
-#reportform {
-    display: flex;
-}
-
 .grid-container {
     columns: 4 290px;
     column-gap: 1.5rem;
@@ -371,24 +328,6 @@ fieldset {
     padding-right: 8px;
 }
 
-.report-btn {
-    font-size: 18px;
-    background-color: #eea849;
-    color: white;
-    padding: 5px;
-    border-color: #f46b45;
-    font-family: 'Pangolin';
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-
-.report-btn:hover {
-    background-color: #f46b45;
-    transition: all 0.5s ease;
-    transform: translate(5px, 1px);
-}
-
 .buttons-links {
     display: flex;
     justify-content: space-around;
@@ -481,7 +420,6 @@ fieldset {
     margin-bottom: 10px;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     transition: all 1s ease;
-    
 }
 
 .card-image:hover {
@@ -491,7 +429,7 @@ fieldset {
 
 .image-text1::before {
     content: "Милая любопытная крыска :з";
-    font-size: 24px;
+    font-size: 22px;
     color: rgba(0, 0, 0, 0);
     transition: all 1s ease;
 }
@@ -505,7 +443,7 @@ fieldset {
 
 .image-text2::before {
     content: "Более милая и любопытная крыска :з";
-    font-size: 24px;
+    font-size: 22px;
     color: rgba(0, 0, 0, 0);
     transition: all 1s ease;
 }
@@ -519,7 +457,7 @@ fieldset {
 
 .image-text3::before {
     content: "Задумчивая крыска с:";
-    font-size: 24px;
+    font-size: 22px;
     color: rgba(0, 0, 0, 0);
     transition: all 1s ease;
 }
@@ -528,7 +466,17 @@ fieldset {
     content: "Задумчивая крыска с:";
     color: rgba(94, 94, 94, 1);
     transform: rotate(10deg);
-    transition: all 1s ease;
+    transition: all 0.7s ease;
+}
+
+.image-block {
+    filter: blur(0);
+    transition: all 0.7s ease;
+}
+
+.cards-block:hover > .image-block:not(:hover){
+    transition: all 0.5s ease;
+    filter: blur(3px);
 }
 
 .video-box:hover > .video-info {
@@ -578,6 +526,8 @@ h2, h3 {
     padding-top: 25px;
     padding-bottom: 25px
 }
+
+
 
 
 
@@ -631,12 +581,15 @@ h2, h3 {
     left: 0px;
     width: 60px;
     height: 60px;
+}
+
+.box span::after, .box span::before {
     opacity: 0;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #ffffff1a;
     backdrop-filter: blur(10px);
     transition: 1s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+    box-shadow: 0 5px 15px #00000014;
 }
    
 .box span::after {
@@ -646,13 +599,7 @@ h2, h3 {
     right: 0px;
     width: 100px;
     height: 100px;
-    opacity: 0;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    transition: 1s;
     z-index: 5;
-    box-shadow: 0 0 5px rgba(0,0,0,0.08);
 }
 
 .box:hover span::after, .box:hover span::before {
@@ -666,7 +613,7 @@ h2, h3 {
     height: 140px;
     padding: 20px 40px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px #0000001a;
     border-radius: 8px;
     z-index: 1;
     transform: 0.8s;
@@ -753,7 +700,6 @@ h2, h3 {
     z-index: 2;
 }
 
-
 .footer-btn {
     cursor: pointer;
     border-radius: 3px;
@@ -779,7 +725,7 @@ h2, h3 {
     left: inherit;
     bottom: inherit;
     margin-left: -17.5px;
-    margin-top: -32px;
+    margin-top: -32.5px;
     width: 35px;
     height: 0;
     background: linear-gradient(to left, #ff13e0, #fffb00ab);
@@ -791,4 +737,215 @@ h2, h3 {
 .footer-btn:hover .btn-gradient::before {
     height: 35px;
     transition: 0.7s;
+}
+
+.report {
+    display: flex;
+    justify-content: center;
+}
+
+.report-form {
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.report-fieldset {
+    display: flex;
+    justify-content: center;
+    width: 35%;
+    border-color: #ffffff00;    
+    background: rgba(255, 255, 255, 0.037);
+    backdrop-filter: blur(7px);
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.block-elements::after {
+    z-index: 2;
+}
+
+.block-elements::before, .block-elements::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.036);
+    backdrop-filter: blur(7px);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.08);
+}
+
+.elem1::after {
+    bottom: -40px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+.elem1::before {
+    top: -30px;
+    left: -70px;
+    width: 120px;
+    height: 120px;
+}
+
+.elem2::after {
+    bottom: 50px;
+    left: -70px;
+    width: 90px;
+    height: 90px;
+}
+
+.elem2::before {
+    top: 90px;
+    right: -110px;
+    width: 150px;
+    height: 150px;
+}
+
+.elem1::before, .elem1::after {
+    animation-name: blockElementsMovement1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.elem2::before, .elem2::after {
+    animation-name: blockElementsMovement2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.block-elements {
+    --c1: 2;
+    --c2: 3;
+    --c3: 4;
+    --c4: 5;
+}
+
+@keyframes blockElementsMovement1 {
+    25% {
+        transform: translate(calc(45px / var(--c1)), calc(25px / var(--c2)));
+    }
+    50% {
+        transform: translate(calc(10px / var(--c1)), calc(-5px / var(--c2)));
+    }
+    75% {
+        transform: translate(calc(-20px / var(--c1)), calc(40px / var(--c2)));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes blockElementsMovement2 {
+    25% {
+        transform: translate(calc(-20px / var(--c1)), calc(40px / var(--c2)));
+        
+    }
+    50% {
+        transform: translate(calc(10px / var(--c1)), calc(-20px / var(--c2)));
+    }
+    75% {
+        transform: translate(calc(15px / var(--c1)), calc(30px / var(--c2)));
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.report-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+}
+
+.report-textarea, .report-input, .report-btn {  
+    border-radius: 15px;
+}
+
+.report-textarea, .report-input {
+    border: 1px solid #959595aa;
+}
+
+.report-input {
+    font-size: 14px;
+    height: 25px;
+}
+
+.report-btn {   
+    font-size: 16px;
+    width: 100px;
+    background-color: #eea949cf;
+    color: white;
+    padding: 5px;
+    border-color: #ffffff41;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.report-btn:hover {
+    background-color: #f46b45d4;
+    transition: all 0.5s ease;
+    transform: translate(5px, 1px);
+}
+
+.features-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    background: linear-gradient(135deg, #ffb84d, #cc24ff);
+    padding: 20px;
+    transition: 1s;
+    color: white;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 0;
+    height: 0;
+    border-top: 2px solid #ff9100;
+    border-left: 2px solid #ff9100;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.feature-card::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 0;
+    height: 0;
+    border-bottom: 2px solid #8800ff;
+    border-right: 2px solid #8800ff;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    filter: brightness(120%);
+    transition: 1s;
+}
+
+.feature-card:hover::after, .feature-card:hover::before {
+    visibility: visible;
+    width: 100px;
+    height: 100px;
+    transition: 1s;
 }

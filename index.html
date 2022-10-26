@@ -79,7 +79,7 @@
                     <li><a href="#galery">Галерея</a>
                     <li><a href="#links">Полезные материалы</a>
                     <li><a href="#kards">Карточки</a>
-                    <li><a href="#video-block">Смешные видео :з</a>
+                    <!-- <li><a href="#video-block">Смешные видео :з</a> -->
                     <li><a href="#links-material">Ещё больше полезностей</a>   
                     <li><a href="#report">Нашли ошибку?</a>
                 </ol>
@@ -206,40 +206,6 @@
                 </div>
             </section>
 
-            <section>
-                <h3 id="features">Забавные особенности</h3>
-                <div>
-                    <dl>
-                        <dt>Ночной шум</dt> <!-- Список "терминов" -->
-                        <dd>
-                            Не ждите, что крыса будет спать по тому же графику, что и вы...
-                        </dd>
-
-                        <dt>Писки и визги</dt>
-                        <dd>
-                            Если ваша крыса громко шумит, скорее всего она чем-то недовольна.
-                        </dd>
-
-                        <dt>Охота на мусор</dt>
-                        <dd>
-                            Крысы берут всё, что могут добыть, и затем приносят это в своё логово. 
-                        </dd>
-
-                        <dt>Укусы</dt>
-                        <dd>
-                            Если ваша крыса грызёт или лижет вас, возможно, она проявляет к вам привязанность.
-                        </dd>
-
-                        <dt>Копание</dt>
-                        <dd>
-                            В дикой природе крысы живут в <u>подземных норах</u>. Домашние крысы также роют норы или 
-                            землю, особенно если им предлагают подстилку или кучу измельчённой бумаги, чтобы 
-                            создать безопасное и удобное место для сна.
-                        </dd>
-                    </dl>
-                </div>
-            </section>
-
             <div class="gallery-div">
                 <h3 id="galery">Галерея</h3>
 
@@ -331,34 +297,36 @@
             <div>
                 <h3 id="cards">Карточки</h3>
                 <div class="cards-block">
-                    <div class="image-block">
+                    <div class="image-block image-block1">
                         <img
                             class="card-image card-image1" 
                             src="https://i.pinimg.com/originals/7c/e4/7b/7ce47bc24b1c8a5b43f4fe552cde2095.jpg"
-                            width="400"
-                            height="500">
+                            width="360"
+                            height="450">
                         <p class="image-text1"><br></p>
                     </div>
                     
-                    <div>
+                    <div class="image-block image-block2">
                         <img
                             class="card-image card-image2"  
                             src="https://i.pinimg.com/originals/2c/6c/cb/2c6ccb12af0f8053598094c758d8c9e3.png"
-                            width="400"
-                            height="500">
+                            width="360"
+                            height="450">
                         <p class="image-text2"><br></p>
                     </div>
                     
-                    <div>
+                    <div class="image-block image-block3">
                         <img
                             class="card-image card-image3"  
                             src="https://i.pinimg.com/originals/f2/01/4f/f2014f69018359f4f154bf3b4d20f7ff.jpg"
-                            width="400"
-                            height="500">
+                            width="360"
+                            height="450">
                         <p class="image-text3"><br></p>
                     </div>      
                 </div>
             </div>
+
+            <!--
 
             <div>
                 <h3 id="video-block">Смешные видео :з</h3>
@@ -378,6 +346,8 @@
                     </div>
                 </div>
             </div>
+
+            -->
 
             <div class="links-material">
                 <h3 id="links-material">Ещё больше полезностей:</h3>
@@ -411,60 +381,70 @@
                 </div>
             </div>
 
+            <div class="features-block">
+                <h3 id="features">Забавные особенности</h3>
+                <div class="features-cards">
+                    <div class="feature-card feature-card1">
+                        <h4>Ночной шум</h4>
+                        <p>
+                            Не ждите, что крыса будет спать по тому же графику, что и вы...
+                        </p>
+                    </div>
+
+                    <div class="feature-card feature-card2">
+                        <h4>Охота на мусор</h4>
+                        <p>
+                            Крысы берут всё, что могут добыть, и затем приносят это в своё логово.
+                        </p>
+                    </div>
+
+                    <div class="feature-card feature-card3">
+                        <h4>Укусы</h4>
+                        <p>
+                            Если ваша крыса грызёт или лижет вас, возможно, она проявляет к вам привязанность.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div>
                 <h3 id="report">Нашли ошибку?</h3>
-                <p>
-                    Если вы нашли ошибку в тексте или какую-либо неточность, вы можете сразу сообщить нам, заполнив форму ниже:
-                </p>
+                <p>Если вы нашли ошибку в тексте или какую-либо неточность, вы можете сразу сообщить нам, заполнив форму ниже:</p>
                 
-                <form action="" method="post" id="reportform">
-                    <fieldset>
-                        <legend>Пожалуйста, введите свои данные</legend>
-                        
-                            <label for="name"> Имя:</label>
-                            <input type="text" name="name" id="name" max="30" required>
-                            <br>        
-                            <label for="phonenum">Телефон:</label>
-                            <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="+7" required>
-                            <br>
-                            <label for="email">Почта:</label>
-                            <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" required>
-                        
-                        <br><br>        
-                        
-                        <label for="reporttext">Опишите проблему:</label><br>
-                        <textarea class="report-textarea"
-                            id="reporttext" 
-                            name="reporttext" 
-                            rows="5" 
-                            cols="60"
-                            maxlength="1000" 
-                            minlength="50" 
-                            placeholder="Распишите всё подробно! :)"
-                            required>
-                        </textarea>
-                        <br>
-                        <label for="city-select" id="city-label">Ваш город:</label>
-                        <select name="city-select" id="city-select" required>
-                            <option value="">--Выберите город</option>
-                            <option value="moscow">Москва</option>
-                            <option value="petersburg">Санкт-Петербург</option>
-                            <option value="ekaterinburg">Екатеринбург</option>
-                            <option value="kazan">Казань</option>
-                            <option value="samara">Самара</option>
-                            <option value="novosibirsk">Новосибирск</option>
-                            <option value="kemerovo">Кемерово</option>
-                        </select>
+                <br>
+                <div class="report">
+                    <form action="" method="post" id="report-form" class="report-form">
 
-                        <p>
-                            <label for="notrobot">Я не робот</label>
-                            <input type="checkbox" name="notrobot" id="notrobot" required>
-                        </p>
-                    
-                        <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked> 
-                        
-                    </fieldset>
-                </form><br>
+                        <span class="block-elements elem1"></span>
+                        <span class="block-elements elem2"></span>
+
+                        <fieldset class="report-fieldset">
+                            <div class="report-content">
+                                <input type="text" name="name" id="name" max="30" placeholder="Имя" class="report-input" required>
+                                <br>      
+                                <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="Номер телефона" class="report-input" required>
+                                <br>
+                                <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" 
+                                    placeholder="Почта" class="report-input" required>
+                                <br>    
+                                
+                                <label for="reporttext">Опишите проблему:</label><br>
+                                <textarea class="report-textarea"
+                                    id="reporttext" 
+                                    name="reporttext" 
+                                    rows="5" 
+                                    cols="40"
+                                    maxlength="1000" 
+                                    minlength="50" 
+                                    required>
+                                </textarea>
+                                <br>
+                            
+                                <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked> 
+                            </div>
+                        </fieldset>
+                    </form><br>
+                </div>
             </div>
         </main>
 
