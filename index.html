@@ -458,15 +458,14 @@
                             <span class="block-elements elem2"></span>
 
                             <fieldset class="report-fieldset">
-                                <div class="report-content">
-                                    <input type="text" name="name" id="name" max="30" placeholder="Имя" class="report-input" required>
-                                    <br>      
-                                    <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="Номер телефона" class="report-input" required>
-                                    <br>
-                                    <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" 
-                                        placeholder="Почта" class="report-input" required>
-                                    <br>    
-                                    
+                                <input type="text" name="name" id="name" max="30" placeholder="Имя" class="report-input report-name" required>
+
+                                <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="Номер телефона" class="report-input report-phone" required>
+
+                                <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" 
+                                    placeholder="Почта" class="report-input report-email" required>
+
+                                <div class="report-texarea-block">
                                     <label for="reporttext">Опишите проблему:</label><br>
                                     <textarea class="report-textarea"
                                         id="reporttext" 
@@ -478,9 +477,8 @@
                                         required>
                                     </textarea>
                                     <br>
-                                
-                                    <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked> 
-                                </div>
+                                    <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked>
+                                </div> 
                             </fieldset>
                         </form><br>
                     </div>
