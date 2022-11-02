@@ -161,12 +161,16 @@ main {
     background: linear-gradient(to left, #f46b45, #eea849);
     height: 80px;
     position: relative;
-    bottom: -8px;
-    left: -8px;
-    width: 101%;
+    bottom: -7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 div {
@@ -207,7 +211,7 @@ a:active {
     margin: 0 auto;
 }
 
-.grid-item {
+.grid-item {    
     width: 150px;
     margin: 0 1.5rem 1.5rem 0;
     display: inline-block;
@@ -476,6 +480,7 @@ a:active {
 
 .cards-block:hover > .image-block:not(:hover){
     transition: all 0.5s ease;
+    transform: scale(0.99);
     filter: blur(3px);
 }
 
@@ -582,15 +587,6 @@ h2, h3 {
     width: 60px;
     height: 60px;
 }
-
-.box span::after, .box span::before {
-    opacity: 0;
-    border-radius: 8px;
-    background: #ffffff1a;
-    backdrop-filter: blur(10px);
-    transition: 1s;
-    box-shadow: 0 5px 15px #00000014;
-}
    
 .box span::after {
     content: '';
@@ -602,9 +598,20 @@ h2, h3 {
     z-index: 5;
 }
 
+.box span::after, .box span::before {
+    border-radius: 8px;
+    background: #ffffff1a;
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 5px 15px #00000014;
+
+    opacity: 0;
+    transition: 1s;
+}
+
 .box:hover span::after, .box:hover span::before {
     opacity: 1;
-    transform: translate(25px, 0px);
+    transition: 1s;
+    transform: translate(15px, 5px);
 }
 
 .box .content {
@@ -907,6 +914,10 @@ h2, h3 {
     width: 200px;
     background: linear-gradient(135deg, #ffb84d, #cc24ff);
     padding: 20px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
     transition: 1s;
     color: white;
 }
