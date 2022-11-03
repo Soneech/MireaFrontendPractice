@@ -872,9 +872,14 @@ a {
     transition: 1s;
 }
 
+.fact-image3 {
+    width: 80px;
+}
+
 .fact-box:hover {
     transition: 1s;
     filter: brightness(130%);
+    transform: scale(1.01);
 }
 
 .report {
@@ -906,6 +911,15 @@ a {
 
 .report-email, .report-texarea-block {
     grid-column: span 2;
+}
+
+.report-email, .report-name, .report-textarea, .report-phone {
+    transition: 1s;
+}
+
+.report-email:focus, .report-name:focus, .report-textarea:focus, .report-phone:focus {
+    background-color: #ffeacd;
+    transition: 1s;
 }
 
 .report-textarea, .report-input, .report-btn {  
@@ -1008,6 +1022,27 @@ a {
     .about-us {
         margin-right: 40px;
     }
+}
+
+@media (max-width: 800px) {
+    .facts-block {
+        transform: scale(0.8);
+    }
+    
+}
+
+@media (max-width: 655px) {
+    .facts-block {
+        transform: scale(0.6);
+    }
+    
+}
+
+@media (max-width: 515px) {
+    .facts-block {
+        transform: scale(0.5);
+    }
+    
 }
 
 @media (max-width: 560px) {
