@@ -1161,3 +1161,17 @@ a {
     margin-bottom: -100px;
     margin-top: 50px;
 }
+
+.header-right-part {
+    display: flex;
+}
+
+.reg-button {
+    border-radius: 30px;
+    border: 0px solid white;
+    color: white;
+    font-size: 18px;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    background-color: #e85c35;
+}
