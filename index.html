@@ -14,10 +14,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=PT+Sans+Narrow&family=Pangolin&display=swap" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-        <script src="js/main_script.js"></script>
     </head>
 
     <body>
+
         <header href="top"> <!-- Шапка сайта -->
             <h3 class="logo-text">Всё о крысках :3</h3>
 
@@ -34,6 +34,13 @@
                 <li><a href="#galery">Галерея</a>
             </ul>
         </header>
+
+        <div class="drawing-block">
+            <h3 id="drawing">Рисовашки</h3>
+            <canvas class="drawing-canvas"></canvas>
+            <button class="drawing-button">Рисовать</button>
+        </div>
+        <script src="js/drawing.js"></script>
 
         <div class="notification">
             <div class="notification-icon">
@@ -84,7 +91,8 @@
                             <li><a href="#links">Полезные материалы</a>
                             <li><a href="#kards">Карточки</a>
                             <li><a href="#links-material">Ещё больше полезностей</a>
-                            <li><a href="#facts">Интересные факты</a>       
+                            <li><a href="#facts">Интересные факты</a>
+                            <li><a href="#drawing">Рисовашки</a>       
                             <li><a href="#report">Нашли ошибку?</a>
                         </ol>
                     </div>
@@ -112,11 +120,12 @@
                             alt="Фото милых крысок"
                             width="520"
                             height="400">
-                            <button id="like-button">
+                            <button class="like-button">
                                 <img src="icons/heart.png"
                                 width="25">
-                                <p id="like-btn-text">0</p>
+                                <p class="like-btn-text">0</p>
                             </button>
+                            <script src="js/like_button.js"></script>
                         </div>
                         
                         <p>

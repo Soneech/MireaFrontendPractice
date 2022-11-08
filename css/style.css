@@ -3,6 +3,7 @@ body {
     font-size: large;
     line-height: 30px;
     height: 100%;
+    padding: 50px;
     color: #444444;
 }
 
@@ -1110,7 +1111,7 @@ a {
     transition: 0.7s;
 }
 
-#like-button {
+.like-button {
     background-color:darkgrey;
     border-radius: 30px;
     border: 0px solid white;
@@ -1128,4 +1129,35 @@ a {
     
     -webkit-transition: 0.8s;
             transition: 0.8s;
+}
+
+.drawing-canvas {
+    display: block;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px #90909080;
+}
+
+.drawing-button {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: 0px solid white;
+    color: white;
+    background-color:red;
+    font-size: 18px;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    padding: 5px;
+    width: 100px;
+    box-shadow: 0px 0px 20px 1px #90909041;
+    transition: 1s;
+}
+
+.drawing-block {
+    margin-bottom: -100px;
+    margin-top: 50px;
 }
