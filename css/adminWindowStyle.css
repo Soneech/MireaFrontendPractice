@@ -1,0 +1,68 @@
+body {
+    font-family: 'Pangolin';
+    font-size: large;
+    line-height: 30px;
+    height: 100%;
+    padding: 50px;
+    color: #444444;
+}
+
+header {   
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, #f46b45, #eea849);
+    color: #FFF;
+    text-shadow: #E0CCC2 0 0 5px;
+    height: 90px;
+    width: 100%;
+}
+
+.logo-text {
+    margin-left: 20px;
+}
+
+.header-text {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 900px;
+    height: 200px;
+    box-shadow: 0 5px 15px #00000036;
+    border-radius: 5px;
+    margin-top: 200px;
+}
+
+.reg-button {
+    border-radius: 30px;
+    border: 0px solid white;
+    color: white;
+    font-size: 18px;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    margin-left: 50px;
+    background-color: #e98366;
+    transition: 1s;
+}
+
+.reg-button:hover {
+    background-color: #f6653e;
+    transition: 1s;
+}
+
+.admit-text {
+    font-size: 20px;
+    margin-left: 50px;
+}
