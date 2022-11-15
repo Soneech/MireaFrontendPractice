@@ -15,8 +15,9 @@ function setMousePosition(e) {
 function update() {
     context.beginPath();
     context.arc(mouseX, mouseY, 5, 0, 2 * Math.PI, true);
-    context.fillStyle = "#FF6A6A";
     context.fill();
+    context.fillStyle = "#FF6A6A";
+   
     if (drawButton.style.backgroundColor == 'blue') {
         requestAnimationFrame(update);
     }
