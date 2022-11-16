@@ -11,7 +11,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/fontawesome.min.css">
+
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=PT+Sans+Narrow&family=Pangolin&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
 
         <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     </head>
@@ -368,7 +373,7 @@
                         <div class="feature-card feature-card1">
                             <h4>Ночной шум</h4>
                             <p>
-                                Не ждите, что крыса будет спать по тому же графику, что и вы...
+                                Не ждите, что крыса будет спать по тому же графику, что и вы :)
                             </p>
                         </div>
 
@@ -387,6 +392,7 @@
                         </div>
                     </div>
                 </div>
+                <scpript src="js/stringOnCards.js"></scpript>
 
                 <div class="facts-block">
                     <h3 id="facts">Интересные факты</h3>
@@ -462,19 +468,17 @@
                     
                     <br>
                     <div class="report">
-                        <form action="" method="post" id="report-form" class="report-form">
+                        <form id="report-form" class="report-form" onsubmit="formSubmit(this);return false">
 
                             <span class="block-elements elem1"></span>
                             <span class="block-elements elem2"></span>
 
                             <fieldset class="report-fieldset">
-                                <input type="text" name="name" id="name" max="30" placeholder="Имя" class="report-input report-name" required>
-
-                                <input type="text" name="phonenum" id="phonenum" min="11" max="11" placeholder="Номер телефона" class="report-input report-phone" required>
+                                <input type="text" name="name" id="name" placeholder="Имя" class="report-input report-name" required>
 
                                 <input type="email" name="email" id="email" pattern="^[a-zA-Z\.\-\_]\@[a-z0-9A-Z]\.(com|net|org|ru)$" 
                                     placeholder="Почта" class="report-input report-email" required>
-
+                                
                                 <div class="report-texarea-block">
                                     <label for="reporttext">Опишите проблему:</label><br>
                                     <textarea class="report-textarea"
@@ -487,8 +491,19 @@
                                         required>
                                     </textarea>
                                     <br>
-                                    <input type="submit" name="reportbtn" id="reportbtn" class="report-btn" checked>
                                 </div> 
+
+                                <div class="captcha-block">
+                                    <label class="captcha-label">Введите символы:</label>
+                                    <p class="captcha-text"></p>
+                                    <input type="text" name="captcha" class="report-input captcha-input" required>
+                                </div>
+
+                                <div clas="report-btn-block">
+                                    <button type="submit" class="report-btn">Отправить</button>
+                                </div>
+
+                                <script src="js/captcha.js"></script>
                             </fieldset>
                         </form><br>
                     </div>
