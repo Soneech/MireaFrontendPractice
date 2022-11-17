@@ -24,8 +24,6 @@ function showBaseTexts(event) {
 
 var featuresCards = document.querySelectorAll(".feature-card");
 
-//featuresCard1.addEventListener("mouseover", {handleEvent: showBaseTexts, pos: 0});
-
 for (let i = 0; i < featuresCards.length; i++) {
     featuresCards[i].addEventListener("mouseover", {handleEvent: showBaseTexts, pos: i});
 }

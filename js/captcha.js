@@ -7,7 +7,7 @@ var reportForm = document.querySelector(".report-form");
 var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 var minLength = 5;
-var maxlength = 10;
+var maxlength = 8;
 var captcha = "";
 
 
@@ -28,6 +28,7 @@ function formSubmit(form) {
         form.submit();
     }
     else {
+        alert("Неверный ввод!");
         generateCaptcha();
     }
 }
@@ -40,7 +41,12 @@ function generateCaptcha() {
     let value1 = Math.floor(Math.random() * (max - min + 1) + min);
     let value2 = Math.floor(Math.random() * (max - min + 1) + min);
 
-    captchaText.textContent = value1 + " + " + value2 + " =";
+    if (value2 < 0) {
+        captchaText.textContent = value1 + " + (" + value2 + ") =";
+    }
+    else {
+        captchaText.textContent = value1 + " + " + value2 + " =";
+    }
     captchaLabel.textContent = "Введите значение выражения:";
     captcha = value1 + value2;
 }
