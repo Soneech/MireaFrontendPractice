@@ -1,0 +1,96 @@
+body {
+    font-family: 'Pangolin';
+    font-size: large;
+    line-height: 30px;
+    height: 100%;
+    padding: 50px;
+    color: #444444;
+}
+
+header {   
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, #f46b45, #eea849);
+    color: #FFF;
+    text-shadow: #E0CCC2 0 0 5px;
+    height: 90px;
+    width: 100%;
+}
+
+.logo-text {
+    margin-left: 20px;
+}
+
+.header-text {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.market-block {
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+}
+
+.products-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 50%;
+    box-shadow: 0 5px 15px #00000036;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.basket-block {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.basket {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    box-shadow: 0 5px 15px #00000036;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+button {
+    border-radius: 30px;
+    border: 0px solid white;
+    color: white;
+    font-size: 18px;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    width: 250px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #e98366;
+    transition: 1s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #f6653e;
+    transition: 1s;
+}
+
+.buttons-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
