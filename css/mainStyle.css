@@ -283,6 +283,10 @@ a:active {
     animation-duration: 0.75s;  
 }
 
+.notification-popup:hover {
+    display: block;
+}
+
 @keyframes dropPanel {
     0% {
         opacity: 0;
