@@ -1,9 +1,15 @@
 var popup = document.querySelector(".notification-popup");
-var count = 0;
+var bell = document.querySelector(".notification-icon");
+var countSpan = bell.querySelector("span");
+
+var newCount = 0;
+var count = 4;
 
 function addNotification() {
+    newCount++;
     count++;
-    console.log(count);
+    
+    countSpan.textContent = count;
 
     divElem = document.createElement("div");
     divElem.classList.add("notification-item");
@@ -13,11 +19,23 @@ function addNotification() {
     iElem.classList.add("fa-newspaper");
     
     pElem = document.createElement("p");
-    pElem.textContent = "Новое уведомление " + count;
+    pElem.textContent = "Новое уведомление " + newCount;
 
     divElem.appendChild(iElem);
     divElem.appendChild(pElem);
     popup.appendChild(divElem);
 }
 
-setInterval(addNotification, 3000);
+function delayDecorator(func) {
+    if (Date.now() - lastOpenTime > 10000) {
+        func();
+    }
+}
+
+function buttonClick() {
+    lastOpenTime = Date.now();
+}
+
+var lastOpenTime = 0;
+setInterval(delayDecorator, 3000, addNotification);
+bell.addEventListener('click', buttonClick);
