@@ -32,18 +32,16 @@ header {
 }
 
 .market-block {
+    display: flex;
     margin: auto;
     margin-top: 80px;
-    display: flex;
-    width: 95%;
-    justify-content: space-around;
+    width: 95%;   
 }
 
 .products-block {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: auto;
+    justify-content: start;
     width: 50%;
     box-shadow: 0 5px 15px #00000036;
     border-radius: 5px;
@@ -54,7 +52,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 50%;
-    justify-content: space-around;
 }
 
 .basket {
@@ -65,7 +62,6 @@ header {
     height: auto;
     box-shadow: 0 5px 15px #00000036;
     border-radius: 5px;
-    margin-top: 10px;
     padding: 20px;
 }
 
@@ -81,7 +77,7 @@ button {
     margin-left: 10px;
     background-color: #e98366;
     transition: 1s;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 button:hover {
@@ -93,4 +89,30 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.filter-block {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 80px;  
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    box-shadow: 0 5px 15px #00000036;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 35px;
+}
+
+.buttons-block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-right: 30px;
 }

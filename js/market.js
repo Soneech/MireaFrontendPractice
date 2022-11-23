@@ -1,5 +1,6 @@
 var productListDoc = document.querySelector(".product-list");
 var basketListDoc = document.querySelector(".basket-list");
+var filterListDoc = document.querySelector(".filter-list");
 var totalPriceElem = document.querySelector(".total-price");
 
 var productList = [
@@ -11,10 +12,14 @@ var productList = [
     {name: "Миска", price: 135}
 ];
 
+function setProductContent(element, item) {
+    element.textContent = item.name + "; Цена: " + item.price + " р";
+}
+
 function showProducts() {
     for (let i = 0; i < productList.length; i++) {
         let element = document.createElement('li');
-        element.textContent = productList[i].name + "; Цена: " + productList[i].price + " р";
+        setProductContent(element, productList[i]);
         productListDoc.appendChild(element);
     }
 }
@@ -65,7 +70,7 @@ function updateBasket(index) {
     let item = basketList[index];
 
     let element = document.createElement('li');
-    setTextContent(element, item);
+    setBasketContent(element, item);
     basketListDoc.appendChild(element);
 
     element.addEventListener('click', {handleEvent: replaceItem, oldItem: item, oldItemInd: index, elem: element})
@@ -75,10 +80,10 @@ function updateBasketItem(index) {
     let item = basketList[index];
     let elements = basketListDoc.querySelectorAll("li");
     let element = elements[index];
-    setTextContent(element, item);
+    setBasketContent(element, item);
 }
 
-function setTextContent(element, item) {
+function setBasketContent(element, item) {
     element.textContent = item.name + "; Цена: " + item.price + " р; Кол-во: " + item.count 
         + "; Итоговая стоимость: " + item.price * item.count + "р";
 }
@@ -107,3 +112,23 @@ function shiftItem() {
 
 var shiftButton = document.querySelector(".shift");
 shiftButton.onclick = shiftItem;
+
+
+function filterProductsList() {
+    let start = prompt("Введите начало диапазона цен");
+    let end = prompt("Введите конец диапазона цен");
+    try {
+        let filterList = productList.filter(item => (item.price >= start && item.price <= end));
+        for (let i = 0; i < filterList.length; i++) {
+            let element = document.createElement("li");
+            setProductContent(element, filterList[i]);
+            filterListDoc.appendChild(element);
+        }
+    } catch {
+        alert("Некорректный ввод! Попробуйте ещё раз.");
+    }
+    
+}
+
+var filterButton = document.querySelector(".filter-btn");
+filterButton.onclick = filterProductsList;
