@@ -16,14 +16,14 @@ function setProductContent(element, item) {
     element.textContent = item.name + "; Цена: " + item.price + " р";
 }
 
-function showProducts() {
-    for (let i = 0; i < productList.length; i++) {
-        let element = document.createElement('li');
-        setProductContent(element, productList[i]);
-        productListDoc.appendChild(element);
+function showProducts(listDoc, list) {
+    for (let i = 0; i < list.length; i++) {
+        let element = document.createElement("li");
+        setProductContent(element, list[i]);
+        listDoc.appendChild(element);
     }
 }
-showProducts();
+showProducts(productListDoc, productList);
 
 var totalPrice = 0;
 var basketList = [];
@@ -112,13 +112,15 @@ function shiftItem() {
 
 var shiftButton = document.querySelector(".shift");
 shiftButton.onclick = shiftItem;
-
+var filterList;
 
 function filterProductsList() {
+    filterListDoc.innerHTML = "";
+
     let start = prompt("Введите начало диапазона цен");
     let end = prompt("Введите конец диапазона цен");
     try {
-        let filterList = productList.filter(item => (item.price >= start && item.price <= end));
+        filterList = productList.filter(item => (item.price >= start && item.price <= end));
         for (let i = 0; i < filterList.length; i++) {
             let element = document.createElement("li");
             setProductContent(element, filterList[i]);
@@ -132,3 +134,22 @@ function filterProductsList() {
 
 var filterButton = document.querySelector(".filter-btn");
 filterButton.onclick = filterProductsList;
+
+function compareProducts(a, b) {
+    if (a.price > b.price) {
+        return 1;
+    }
+    if (a.price == b.price) {
+        return 0;
+    }
+    return -1;
+}
+
+function sortFilterProducts() {
+    filterList.sort(compareProducts);
+    filterListDoc.innerHTML = "";
+    showProducts(filterListDoc, filterList);
+}
+
+var sortButton = document.querySelector(".sort-btn");
+sortButton.onclick = sortFilterProducts;
