@@ -5,10 +5,8 @@ var countSpan = bell.querySelector("span");
 var newCount = 0;
 var count = 4;
 
-function addNotification() {
-    newCount++;
+function showNotification(notification) {
     count++;
-    
     countSpan.textContent = count;
 
     divElem = document.createElement("div");
@@ -19,23 +17,20 @@ function addNotification() {
     iElem.classList.add("fa-newspaper");
     
     pElem = document.createElement("p");
-    pElem.textContent = "Новое уведомление " + newCount;
+    pElem.textContent = notification;
 
     divElem.appendChild(iElem);
     divElem.appendChild(pElem);
     popup.appendChild(divElem);
+
+    setTimeout(function() {
+        popup.removeChild(divElem);
+    }, 1500);
+}   
+
+function createNotification() {
+    let notification = prompt("Введите текст для уведомления");
+    showNotification(notification);
 }
 
-function delayDecorator(func) {
-    if (Date.now() - lastOpenTime > 10000) {
-        func();
-    }
-}
-
-function buttonClick() {
-    lastOpenTime = Date.now();
-}
-
-var lastOpenTime = 0;
-setInterval(delayDecorator, 3000, addNotification);
-bell.addEventListener('click', buttonClick);
+bell.addEventListener('click', createNotification);
