@@ -1,0 +1,77 @@
+body {
+    font-family: 'Pangolin';
+    font-size: large;
+    line-height: 30px;
+    height: 100%;
+    padding: 50px;
+    color: #444444;
+}
+
+header {   
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to left, #f46b45, #eea849);
+    color: #FFF;
+    text-shadow: #E0CCC2 0 0 5px;
+    height: 90px;
+    width: 100%;
+}
+
+.logo-text {
+    margin-left: 20px;
+}
+
+.header-text {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.wishes-block {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    margin-top: 80px; 
+}
+
+.wishes {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 500px;
+    box-shadow: 0 5px 15px #00000036;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+button {
+    border-radius: 30px;
+    border: 0px solid white;
+    color: white;
+    font-size: 18px;
+    font-family: 'Pangolin';
+    cursor: pointer;
+    width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #e98366;
+    transition: 1s;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #f6653e;
+    transition: 1s;
+}
+
+.buttons-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
