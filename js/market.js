@@ -73,7 +73,7 @@ function updateBasket(index) {
     setBasketContent(element, item);
     basketListDoc.appendChild(element);
 
-    element.addEventListener('click', {handleEvent: replaceItem, oldItem: item, oldItemInd: index, elem: element})
+    element.addEventListener('click', {handleEvent: replaceItem, oldItem: item, oldItemInd: index, elem: element});
 }
 
 function updateBasketItem(index) {
