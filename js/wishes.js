@@ -8,7 +8,6 @@ function addWishes() {
         let liElem = document.createElement("li");
         liElem.textContent = input;
         wishesList.appendChild(liElem);
-        //wishesList.innerHTML += ("<li>" + input + "</li>");
         input = prompt("Добавьте своё пожелание");
     }
 }
