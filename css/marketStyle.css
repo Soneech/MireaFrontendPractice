@@ -51,7 +51,7 @@ header {
 .basket-block {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 65%;
 }
 
 .basket {
@@ -115,4 +115,11 @@ button:hover {
     align-items: center;
     width: 50%;
     margin-right: 30px;
+}
+
+li {
+    background-color: #fff0e8;
+    border-radius: 5px;
+    margin: 6px;
+    width: 310px;
 }

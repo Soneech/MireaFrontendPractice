@@ -3,6 +3,13 @@ var basketListDoc = document.querySelector(".basket-list");
 var filterListDoc = document.querySelector(".filter-list");
 var totalPriceElem = document.querySelector(".total-price");
 
+var basketBlock = document.querySelector(".basket-block");
+var basketRect = basketBlock.getBoundingClientRect();
+
+document.onselectstart = function() {
+    return false;
+}
+
 var productList = [
     {name:"Витаминки", price: 50}, 
     {name: "Корм", price: 100}, 
@@ -28,8 +35,12 @@ showProducts(productListDoc, productList);
 var totalPrice = 0;
 var basketList = [];
 
-function addProduct() {
+function getProductNumber() {
     let result = prompt("Введите номер товара");
+    addProduct(result);
+}
+
+function addProduct(result) {
     let findIndex;
 
     let findRes = basketList.find(function(item, index, arr) {
@@ -57,8 +68,49 @@ function addProduct() {
     }
 }
 
+function dragProduct(event, product, index) {
+    console.log(index);
+
+    let copyProduct = product.cloneNode(true);
+    copyProduct.style.position = "absolute";
+
+    moveAt(event);
+    document.body.appendChild(copyProduct);
+    copyProduct.style.zIndex = 1000;
+
+    function moveAt(event) {
+        copyProduct.style.left = event.pageX - copyProduct.offsetWidth / 2 + 'px';
+        copyProduct.style.top = event.pageY - copyProduct.offsetHeight / 2 + 'px';
+    }
+
+    document.onmousemove = function(event) {
+        moveAt(event);
+    }
+
+    copyProduct.onmouseup = function(event) {
+        document.onmousemove = null;
+        if (event.clientX >= basketRect.left && event.clientY >= basketRect.top) {
+            addProduct(index + 1);
+        }
+        document.body.removeChild(copyProduct);
+    }
+
+    copyProduct.ondragstart = function() {
+        return false;
+    };
+}
+
+
 var pushButton = document.querySelector(".push");
-pushButton.onclick = addProduct;
+pushButton.onclick = getProductNumber;
+
+
+var productsElements = productListDoc.querySelectorAll("li");
+for (let i = 0; i < productsElements.length; i++) {
+    productsElements[i].onmousedown = function(event) {
+        dragProduct(event, productsElements[i], i);
+    };
+}
 
 
 function updateTotalPrice(summand) {
