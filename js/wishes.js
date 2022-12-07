@@ -13,3 +13,26 @@ function addWishes() {
 }
 
 pushBtn.onclick = addWishes;
+
+
+function select(event) {
+    let liElem = event.target.closest("li");
+
+    if(!liElem)
+        return;
+    
+    var elements = wishesList.querySelectorAll("li");
+    for (let i = 0; i < elements.length; i++) {
+        if (!event.ctrlKey) {
+            elements[i].classList.remove("selected");
+        }
+        
+    }
+
+    liElem.classList.add("selected");
+} 
+
+wishesList.onclick = select;
+wishesList.onselectstart = function() {
+    return false;
+}

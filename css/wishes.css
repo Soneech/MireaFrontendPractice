@@ -87,3 +87,13 @@ button:hover {
     border-radius: 8px;
     border: 4px double #808080a8;
 }
+
+.selected {
+    background-color: #fff0e8;
+    border-radius: 5px;
+}
+
+li {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
