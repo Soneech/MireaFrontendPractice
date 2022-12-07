@@ -1185,3 +1185,32 @@ a {
     margin-left: 15px;
     cursor: pointer;
 }
+
+.new-gallery-div {
+    text-align: center;
+}
+
+.big-image {
+    border: 4px double grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.small-images-block {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: auto;
+}
+
+.small-image {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.small-image, .big-image {
+    object-fit: cover;
+}

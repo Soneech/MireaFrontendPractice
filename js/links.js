@@ -3,11 +3,7 @@ var contents = document.getElementById("contents");
 function open(event) {
     let li = event.target.closest("li");
 
-    if (!li) {
-        return;
-    }
-
-    if (!contents.contains(li)) {
+    if (!li || !li.classList.contains("new-window")) {
         return;
     }
 
