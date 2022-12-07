@@ -38,7 +38,7 @@ header {
     width: 60%;
     align-items: center;
     margin: auto;
-    margin-top: 80px; 
+    margin-top: 130px; 
 }
 
 .wishes {
@@ -144,6 +144,12 @@ p {
 
 .rat {
     position: absolute;
-    right: 30px;
-    top: 270px;
+    right: 160px;
+    top: 318px;
+}
+
+.rat2 {
+    position: absolute;
+    left: 400px;
+    top: 118px;
 }
