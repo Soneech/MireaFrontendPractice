@@ -141,3 +141,9 @@ p {
     background: #f6653e;
     cursor: pointer;
 }
+
+.rat {
+    position: absolute;
+    right: 30px;
+    top: 270px;
+}
