@@ -69,8 +69,6 @@ function addProduct(result) {
 }
 
 function dragProduct(event, product, index) {
-    console.log(index);
-
     let copyProduct = product.cloneNode(true);
     copyProduct.style.position = "absolute";
 
